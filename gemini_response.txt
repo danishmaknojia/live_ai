@@ -1,0 +1,16 @@
+{
+    "patient_name": "Arko Patel",
+    "patient_dob": "February 10, 1979",
+    "patient_gender": "male",
+    "patient_address": "1234 Elm Street, Seri IL 62701",
+    "patient_phone": null,
+    "insured_name": "United Health care Insurance",
+    "insured_policy_number": null,
+    "diagnosis": "disc degeneration; acute lumbosacral strain",
+    "service_dates": [
+        "1/16, leaving-15-202S"
+    ],
+    "total_charge": "350",
+    "amount_paid": "150",
+    "balance_due": "200"
+}
