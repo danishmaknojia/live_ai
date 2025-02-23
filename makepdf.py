@@ -2,6 +2,7 @@ from pypdf import PdfReader, PdfWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from io import BytesIO
+import json
 
 pdf_path = "claimform.pdf"
 output_path = "filled_claimform.pdf"
@@ -9,98 +10,143 @@ output_path = "filled_claimform.pdf"
 # Grid spacing
 GRID_SPACING = 20  # Adjust for density
 
-# Data to overlay (adjust coordinates as needed)
-# Example dynamic variables (to be assigned actual values elsewhere in the code)
-insured_name = "John Doe"
-insured_address = "123 Main St, Apt 4B"
-insured_city = "New York"
-insured_state = "NY"
-insured_zip = "10001"
+import json
+
+
+# Load JSON file and replace all null values with empty strings
+with open("gemini_response.txt", "r") as file:
+    data = json.load(file)
+
+# Convert None (null) values to empty strings
+for key, value in data.items():
+    if value is None:
+        data[key] = ""
+    elif isinstance(value, dict):  # Handle nested dictionaries
+        for sub_key, sub_value in value.items():
+            if sub_value is None:
+                data[key][sub_key] = ""
+
+
+# Extract values with fallback to empty string ("") if key is missing
+insured_name = data.get("insured_name", "")
+insured_address = data.get("insured_address", "")
+insured_city = data.get("insured_city", "")
+insured_state = data.get("insured_state", "")
+insured_zip = data.get("insured_zip", "")
+
 insurance_programs = {
-    "Medicare": "",
-    "Medicaid": "",
-    "CHAMPUS": "",
-    "CHAMPVA": "",
-    "Group_Health_Plan": "",
-    "FECA Black_Lung": "X",
-    "Other": "",
+    "Medicare": "X" if data.get("insurance_programs", {}).get("Medicare") else "",
+    "CHAMPUS": "X" if data.get("insurance_programs", {}).get("CHAMPUS") else "",
+    "CHAMPVA": "X" if data.get("insurance_programs", {}).get("CHAMPVA") else "",
+    "Medicaid": "X" if data.get("insurance_programs", {}).get("Medicaid") else "",
+    "FECA Black_Lung": (
+        "X" if data.get("insurance_programs", {}).get("FECA Black_Lung") else ""
+    ),
+    "Other": "X" if data.get("insurance_programs", {}).get("Other") else "",
+    "Group_Health_Plan": (
+        "X" if data.get("insurance_programs", {}).get("Group_Health_Plan") else ""
+    ),
 }
 
-patient_name = "Jane Doe"
-patient_birth_date = "02/14/1985"
-patient_sex = "X"  # "F"
-patient_address = "456 Elm St, Apt 23"
-patient_city = "Los Angeles"
-patient_state = "CA"
-patient_zip = "90001"
-patient_phone = "555-123-4567"
-patient_relationship = "X"  # single
-patient_status = "X"  # employment
+patient_name = data.get("patient_name", "")
+patient_birth_date = data.get("patient_birth_date", "")
+patient_sex = "X" if data.get("patient_sex", "").lower() in ["male", "m"] else "X"
+patient_address = data.get("patient_address", "")
+patient_city = data.get("patient_city", "")
+patient_state = data.get("patient_state", "")
+patient_zip = data.get("patient_zip", "")
+patient_phone = data.get("patient_phone", "") or " "
+patient_relationship = data.get("patient_relationship", "")
+patient_status = data.get("patient_status", "")
 
-other_insured_name = "Mike Johnson"
-other_insured_policy = "G123456789"
-other_insured_birth_date = "06/10/1978"
-other_insured_sex = "X"  # M
-other_insured_employer = "ABC Corporation"
-other_insured_insurance_plan = "XYZ Health Plan"
-other_insured_reserved_use = "N/A"
+other_insured_name = data.get("other_insured_name", "")
+other_insured_policy = data.get("other_insured_policy", "") or " "
+other_insured_birth_date = data.get("other_insured_birth_date", "")
+other_insured_sex = "x"
+other_insured_employer = data.get("other_insured_employer", "")
+other_insured_insurance_plan = data.get("other_insured_insurance_plan", "")
+other_insured_reserved_use = data.get("other_insured_reserved_use", "")
 
-condition_employment = "X"  # Yes
-condition_auto_accident = ""
-condition_auto_accident_place = "CA"
-condition_other_accident = ""
+condition_employment = "x"
+condition_auto_accident = " "
+condition_auto_accident_place = data.get("condition_auto_accident_place", "")
+condition_other_accident = " "
 
-Date_of_Current_Illness_Injury_or_Pregnancy = "01/15/2024"
-First_Date_of_Similar_Illness = "12/01/2023"
-Dates_Patient_Unable_to_Work_From = "01/20/2024"
-Dates_Patient_Unable_to_Work_To = "02/05/2024"
-Referring_Physician_Name = "Dr. John Smith"
-Referring_Physician_ID = "RP123456"
-Hospitalization_Dates_From = "01/25/2024"
-Hospitalization_Dates_To = "02/02/2024"
+Date_of_Current_Illness_Injury_or_Pregnancy = data.get(
+    "Date_of_Current_Illness_Injury_or_Pregnancy", ""
+)
+First_Date_of_Similar_Illness = data.get("First_Date_of_Similar_Illness", "")
+Dates_Patient_Unable_to_Work_From = data.get("Dates_Patient_Unable_to_Work_From", "")
+Dates_Patient_Unable_to_Work_To = data.get("Dates_Patient_Unable_to_Work_To", "")
+Referring_Physician_Name = data.get("Referring_Physician_Name", "")
+Referring_Physician_ID = data.get("Referring_Physician_ID", "")
+Hospitalization_Dates_From = data.get("Hospitalization_Dates_From", "")
+Hospitalization_Dates_To = data.get("Hospitalization_Dates_To", "")
 Outside_Lab = "X"
-Charges = "500"
-Medicaid_Resubmission_Code = "07"
-Original_Reference_Number = "OR987654"
-Prior_Authorization_Number = "PA123456"
-Diagnosis_1 = "J11.1"
-Diagnosis_2 = "E11.9"
-Diagnosis_3 = "I10"
-Diagnosis_4 = "M54.5"
-Date_of_Service_From = "02/01/2024"
-Date_of_Service_To = "02/10/2024"
-Place_of_Service = "2"
-Type_of_Service = "3"
-Procedures_CPT_HCPCS_Modifier = "99214"
-Diagnosis_Code = "J11.1"
-Charges = "$250"
-Days_or_Units = "1"
-EPSDT_or_Family_Plan = "No"
-EMG = "No"
-COB = "No"
-Reserved_for_Local_Use = "N/A"
-Federal_Tax_ID = "98-7654321"
-Patient_Account_Number = "ACCT-12345"
+Charges = data.get("Charges", "")
+Medicaid_Resubmission_Code = data.get("Medicaid_Resubmission_Code", "")
+Original_Reference_Number = data.get("Original_Reference_Number", "")
+Prior_Authorization_Number = data.get("Prior_Authorization_Number", "")
+
+Diagnosis_1 = data.get("Diagnosis_1", "")
+Diagnosis_2 = data.get("Diagnosis_2", "")
+Diagnosis_3 = data.get("Diagnosis_3", "")
+Diagnosis_4 = data.get("Diagnosis_4", "")
+
+Date_of_Service_From = data.get("Date_of_Service_From", "")
+Date_of_Service_To = data.get("Date_of_Service_To", "")
+Place_of_Service = data.get("Place_of_Service", "")
+Type_of_Service = data.get("Type_of_Service", "")
+Procedures_CPT_HCPCS_Modifier = data.get("Procedures_CPT_HCPCS_Modifier", "")
+Diagnosis_Code = data.get("Diagnosis_Code", "")
+Procedure_Charges = data.get("Procedure_Charges", "")
+Days_or_Units = data.get("Days_or_Units", "")
+EPSDT_or_Family_Plan = data.get("EPSDT_or_Family_Plan", "")
+EMG = data.get("EMG", "")
+COB = data.get("COB", "")
+Reserved_for_Local_Use = data.get("Reserved_for_Local_Use", "")
+
+Federal_Tax_ID = data.get("Federal_Tax_ID", "")
+Patient_Account_Number = data.get("Patient_Account_Number", "")
 Accept_Assignment = "X"
-Total_Charge = "$1500"
-Amount_Paid = "$200"
-Balance_Due = "$1300"
-Physician_Supplier_Signature = "Dr. Emily Brown"
-Signed_Date = "02/10/2024"
-Facility_Name_and_Address = "HealthCare Center, 123 Wellness St"
-Physician_Supplier_Billing_Name_and_Address = "Dr. Emily Brown, MD"
-PIN = "567890"
-Group_Number = "G12345"
-signed_date = "10/2/2024"
-Insured_ID_Number = "INS123456"
-Telephone = "123 456-7890"
-Insured_Policy_Group_or_FECA_Number = "POL987654"
-Insured_Birth_Date = "03/15/1980"
-Sex = "X"  # M
-Employer_or_School_Name = "ABC Corporation"
-Insurance_Plan_Name = "XYZ Health Plan"
-Another_Health_Benefit_Plan = "X"  # Yes
-Insured_or_Authorized_Person_Signature = "John Doe"
+Total_Charge = data.get("Total_Charge", "")
+Amount_Paid = data.get("Amount_Paid", "")
+Balance_Due = data.get("Balance_Due", "")
+Physician_Supplier_Signature = data.get("Physician_Supplier_Signature", "")
+Signed_Date = data.get("Signed_Date", "")
+
+Facility_Name_and_Address = data.get("Facility_Name_and_Address", "")
+Physician_Supplier_Billing_Name_and_Address = data.get(
+    "Physician_Supplier_Billing_Name_and_Address", ""
+)
+PIN = data.get("PIN", "")
+Group_Number = data.get("Group_Number", "")
+signed_date = data.get("signed_date", "")
+Insured_ID_Number = data.get("Insured_ID_Number", "")
+Telephone = data.get("Telephone", "")
+Insured_Policy_Group_or_FECA_Number = data.get(
+    "Insured_Policy_Group_or_FECA_Number", ""
+)
+Insured_Birth_Date = data.get("Insured_Birth_Date", "")
+Sex = "X"
+Employer_or_School_Name = data.get("Employer_or_School_Name", "")
+Insurance_Plan_Name = data.get("Insurance_Plan_Name", "")
+Another_Health_Benefit_Plan = "X"
+Insured_or_Authorized_Person_Signature = data.get(
+    "Insured_or_Authorized_Person_Signature", ""
+)
+
+# Print extracted values (for debugging)
+print(f"Patient Name: {patient_name}")
+print(f"Patient Birth Date: {patient_birth_date}")
+print(f"Patient Sex: {patient_sex}")
+print(f"Patient Address: {patient_address}")
+print(f"Patient Phone: {patient_phone}")
+print(f"Insured Name: {insured_name}")
+print(f"Diagnosis 1: {Diagnosis_1}")
+print(f"Total Charge: {Total_Charge}")
+print(f"Amount Paid: {Amount_Paid}")
+print(f"Balance Due: {Balance_Due}")
 
 
 # Form data mapping
@@ -254,18 +300,18 @@ can = canvas.Canvas(packet, pagesize=letter)
 width, height = letter  # Get page size
 
 # Draw grid lines
-can.setStrokeColorRGB(0.8, 0.8, 0.8)  # Light gray grid color
-can.setLineWidth(0.5)
+# can.setStrokeColorRGB(0.8, 0.8, 0.8)  # Light gray grid color
+# can.setLineWidth(0.5)
 
 # Vertical grid lines
-for x in range(0, int(width), GRID_SPACING):
-    can.line(x, 0, x, height)
-    can.drawString(x + 2, 5, str(x))  # Label x-axis
+# for x in range(0, int(width), GRID_SPACING):
+#     can.line(x, 0, x, height)
+#     can.drawString(x + 2, 5, str(x))  # Label x-axis
 
 # Horizontal grid lines
-for y in range(0, int(height), GRID_SPACING):
-    can.line(0, y, width, y)
-    can.drawString(2, y + 2, str(y))  # Label y-axis
+# for y in range(0, int(height), GRID_SPACING):
+#     can.line(0, y, width, y)
+#     can.drawString(2, y + 2, str(y))  # Label y-axis
 
 # Draw text at specified positions
 can.setStrokeColorRGB(0, 0, 0)  # Black text color
