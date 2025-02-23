@@ -9,10 +9,6 @@ output_path = "filled_claimform.pdf"
 # Grid spacing
 GRID_SPACING = 20  # Adjust for density
 
-adjust_sex_coord = lambda sex, x, y: (
-    (sex, x - 10, y) if sex == "F" else (sex, x - 48, y)
-)
-
 # Data to overlay (adjust coordinates as needed)
 # Example dynamic variables (to be assigned actual values elsewhere in the code)
 insured_name = "John Doe"
@@ -32,7 +28,7 @@ insurance_programs = {
 
 patient_name = "Jane Doe"
 patient_birth_date = "02/14/1985"
-patient_sex = "F"  # "M" or "F"
+patient_sex = "X"  # "F"
 patient_address = "456 Elm St, Apt 23"
 patient_city = "Los Angeles"
 patient_state = "CA"
@@ -126,7 +122,7 @@ form_data = {
     "Patient_Information": {
         "Patient_Name": (patient_name, 25, 657),
         "Patient_Birth_Date": (patient_birth_date, 235, 654),
-        "Sex": adjust_sex_coord(patient_sex, 367, 654),
+        "Sex": (patient_sex, 357, 654),
         "Patient_Address": (patient_address, 25, 630),
         "City": (patient_city, 25, 610),
         "State": (patient_state, 205, 610),
