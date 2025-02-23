@@ -44,11 +44,7 @@ endobj
 endobj
 5 0 obj
 <<
-<<<<<<< Updated upstream
-/Length 30579
-=======
-/Length 30123
->>>>>>> Stashed changes
+/Length 29721
 >>
 stream
 q
@@ -716,30 +712,27 @@ ET
 0 0 0 RG
 BT
 1 0 0 1 377 657 Tm
-(John Doe) Tj
+(Arko Patel) Tj
 T*
 ET
 BT
 1 0 0 1 377 630 Tm
-(123 Main St\054 Apt 4B) Tj
-<<<<<<< Updated upstream
+(1234 Elm Street\054 Seri IL 62701) Tj
 T*
 ET
 BT
 1 0 0 1 377 605 Tm
-(New York) Tj
+(Seri) Tj
 T*
 ET
 BT
 1 0 0 1 550 605 Tm
-(NY) Tj
+(IL) Tj
 T*
 ET
 BT
 1 0 0 1 377 582 Tm
-(10001) Tj
-=======
->>>>>>> Stashed changes
+(62701) Tj
 T*
 ET
 BT
@@ -760,27 +753,24 @@ T*
 ET
 BT
 1 0 0 1 240 677 Tm
-(X) Tj
+(United Health care Insurance Comprehensive Care) Tj
 T*
 ET
 BT
 1 0 0 1 298 677 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 342 677 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 25 657 Tm
-(Jane Doe) Tj
 T*
 ET
 BT
 1 0 0 1 235 654 Tm
-(02\05714\0571985) Tj
+(02\05510\0551979) Tj
 T*
 ET
 BT
@@ -790,118 +780,96 @@ T*
 ET
 BT
 1 0 0 1 25 630 Tm
-(456 Elm St\054 Apt 23) Tj
 T*
 ET
 BT
 1 0 0 1 25 610 Tm
-(Los Angeles) Tj
 T*
 ET
 BT
 1 0 0 1 205 610 Tm
-(CA) Tj
 T*
 ET
 BT
 1 0 0 1 25 582 Tm
-(90001) Tj
 T*
 ET
 BT
 1 0 0 1 127 582 Tm
-(555\055123\0554567) Tj
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 255 630 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 269 605 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 25 558 Tm
-(Mike Johnson) Tj
 T*
 ET
 BT
 1 0 0 1 25 535 Tm
-(G123456789) Tj
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 25 508 Tm
-(06\05710\0571978) Tj
 T*
 ET
 BT
 1 0 0 1 146 508 Tm
-(X) Tj
+(x) Tj
 T*
 ET
 BT
 1 0 0 1 25 488 Tm
-(ABC Corporation) Tj
 T*
 ET
 BT
 1 0 0 1 25 465 Tm
-(XYZ Health Plan) Tj
 T*
 ET
 BT
 1 0 0 1 250 465 Tm
-(N\057A) Tj
 T*
 ET
 BT
 1 0 0 1 268 535 Tm
-(X) Tj
+(x) Tj
 T*
 ET
 BT
 1 0 0 1 268 510 Tm
-<<<<<<< Updated upstream
-=======
-(X) Tj
->>>>>>> Stashed changes
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 342 510 Tm
-(CA) Tj
 T*
 ET
 BT
 1 0 0 1 268 485 Tm
-<<<<<<< Updated upstream
-=======
-(X) Tj
->>>>>>> Stashed changes
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 380 680 Tm
-(INS123456) Tj
 T*
 ET
 BT
 1 0 0 1 488 583 Tm
-(123 456\0557890) Tj
 T*
 ET
 BT
 1 0 0 1 380 560 Tm
-(POL987654) Tj
 T*
 ET
 BT
 1 0 0 1 407 533 Tm
-(03\05715\0571980) Tj
 T*
 ET
 BT
@@ -911,12 +879,10 @@ T*
 ET
 BT
 1 0 0 1 380 510 Tm
-(ABC Corporation) Tj
 T*
 ET
 BT
 1 0 0 1 380 484 Tm
-(XYZ Health Plan) Tj
 T*
 ET
 BT
@@ -926,57 +892,46 @@ T*
 ET
 BT
 1 0 0 1 420 420 Tm
-(John Doe) Tj
 T*
 ET
 BT
 1 0 0 1 110 420 Tm
-(Jane Doe) Tj
 T*
 ET
 BT
 1 0 0 1 310 420 Tm
-(10\0572\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 27 390 Tm
-(01\05720\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 280 390 Tm
-(12\05701\0572023) Tj
 T*
 ET
 BT
 1 0 0 1 410 390 Tm
-(01\05720\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 505 390 Tm
-(02\05705\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 27 364 Tm
-(Dr\056 John Smith) Tj
 T*
 ET
 BT
 1 0 0 1 220 364 Tm
-(RP123456) Tj
 T*
 ET
 BT
 1 0 0 1 410 364 Tm
-(01\05725\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 505 364 Tm
-(02\05702\0572024) Tj
 T*
 ET
 BT
@@ -986,112 +941,94 @@ T*
 ET
 BT
 1 0 0 1 462 342 Tm
-(\044250) Tj
+(350) Tj
 T*
 ET
 BT
 1 0 0 1 380 317 Tm
-(07) Tj
 T*
 ET
 BT
 1 0 0 1 462 317 Tm
-(OR987654) Tj
 T*
 ET
 BT
 1 0 0 1 380 297 Tm
-(PA123456) Tj
 T*
 ET
 BT
 1 0 0 1 41 317 Tm
-(J11\0561) Tj
+(cronic lower back pain) Tj
 T*
 ET
 BT
 1 0 0 1 41 295 Tm
-(E11\0569) Tj
+(disc degeneration) Tj
 T*
 ET
 BT
 1 0 0 1 240 317 Tm
-(I10) Tj
 T*
 ET
 BT
 1 0 0 1 240 295 Tm
-(M54\0565) Tj
 T*
 ET
 BT
 1 0 0 1 23 245 Tm
-(02\05701\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 83 245 Tm
-(02\05710\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 154 245 Tm
-(2) Tj
 T*
 ET
 BT
 1 0 0 1 174 245 Tm
-(3) Tj
 T*
 ET
 BT
 1 0 0 1 200 245 Tm
-(99214) Tj
 T*
 ET
 BT
 1 0 0 1 324 245 Tm
-(J11\0561) Tj
 T*
 ET
 BT
 1 0 0 1 384 245 Tm
-(\044250) Tj
+(350) Tj
 T*
 ET
 BT
 1 0 0 1 444 245 Tm
-(1) Tj
 T*
 ET
 BT
 1 0 0 1 464 245 Tm
-(No) Tj
 T*
 ET
 BT
 1 0 0 1 484 245 Tm
-(No) Tj
 T*
 ET
 BT
 1 0 0 1 504 245 Tm
-(No) Tj
 T*
 ET
 BT
 1 0 0 1 524 245 Tm
-(N\057A) Tj
 T*
 ET
 BT
 1 0 0 1 25 103 Tm
-(98\0557654321) Tj
 T*
 ET
 BT
 1 0 0 1 180 103 Tm
-(ACCT\05512345) Tj
 T*
 ET
 BT
@@ -1101,47 +1038,40 @@ T*
 ET
 BT
 1 0 0 1 390 103 Tm
-(\0441500) Tj
 T*
 ET
 BT
 1 0 0 1 470 103 Tm
-(\044200) Tj
+(150) Tj
 T*
 ET
 BT
 1 0 0 1 530 103 Tm
-(\0441300) Tj
+(200) Tj
 T*
 ET
 BT
 1 0 0 1 55 40 Tm
-(Dr\056 Emily Brown) Tj
 T*
 ET
 BT
 1 0 0 1 40 60 Tm
-(02\05710\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 180 60 Tm
-(HealthCare Center\054 123 Wellness St) Tj
 T*
 ET
 BT
 1 0 0 1 380 60 Tm
-(Dr\056 Emily Brown\054 MD) Tj
 T*
 ET
 BT
 1 0 0 1 400 40 Tm
-(567890) Tj
 T*
 ET
 BT
 1 0 0 1 500 40 Tm
-(G12345) Tj
 T*
 ET
 Q
@@ -1230,11 +1160,7 @@ endobj
 endobj
 14 0 obj
 <<
-<<<<<<< Updated upstream
-/Length 21002
-=======
-/Length 20546
->>>>>>> Stashed changes
+/Length 20144
 >>
 stream
 q
@@ -1894,30 +1820,27 @@ ET
 0 0 0 RG
 BT
 1 0 0 1 377 657 Tm
-(John Doe) Tj
+(Arko Patel) Tj
 T*
 ET
 BT
 1 0 0 1 377 630 Tm
-(123 Main St\054 Apt 4B) Tj
-<<<<<<< Updated upstream
+(1234 Elm Street\054 Seri IL 62701) Tj
 T*
 ET
 BT
 1 0 0 1 377 605 Tm
-(New York) Tj
+(Seri) Tj
 T*
 ET
 BT
 1 0 0 1 550 605 Tm
-(NY) Tj
+(IL) Tj
 T*
 ET
 BT
 1 0 0 1 377 582 Tm
-(10001) Tj
-=======
->>>>>>> Stashed changes
+(62701) Tj
 T*
 ET
 BT
@@ -1938,27 +1861,24 @@ T*
 ET
 BT
 1 0 0 1 240 677 Tm
-(X) Tj
+(United Health care Insurance Comprehensive Care) Tj
 T*
 ET
 BT
 1 0 0 1 298 677 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 342 677 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 25 657 Tm
-(Jane Doe) Tj
 T*
 ET
 BT
 1 0 0 1 235 654 Tm
-(02\05714\0571985) Tj
+(02\05510\0551979) Tj
 T*
 ET
 BT
@@ -1968,118 +1888,96 @@ T*
 ET
 BT
 1 0 0 1 25 630 Tm
-(456 Elm St\054 Apt 23) Tj
 T*
 ET
 BT
 1 0 0 1 25 610 Tm
-(Los Angeles) Tj
 T*
 ET
 BT
 1 0 0 1 205 610 Tm
-(CA) Tj
 T*
 ET
 BT
 1 0 0 1 25 582 Tm
-(90001) Tj
 T*
 ET
 BT
 1 0 0 1 127 582 Tm
-(555\055123\0554567) Tj
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 255 630 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 269 605 Tm
-(X) Tj
 T*
 ET
 BT
 1 0 0 1 25 558 Tm
-(Mike Johnson) Tj
 T*
 ET
 BT
 1 0 0 1 25 535 Tm
-(G123456789) Tj
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 25 508 Tm
-(06\05710\0571978) Tj
 T*
 ET
 BT
 1 0 0 1 146 508 Tm
-(X) Tj
+(x) Tj
 T*
 ET
 BT
 1 0 0 1 25 488 Tm
-(ABC Corporation) Tj
 T*
 ET
 BT
 1 0 0 1 25 465 Tm
-(XYZ Health Plan) Tj
 T*
 ET
 BT
 1 0 0 1 250 465 Tm
-(N\057A) Tj
 T*
 ET
 BT
 1 0 0 1 268 535 Tm
-(X) Tj
+(x) Tj
 T*
 ET
 BT
 1 0 0 1 268 510 Tm
-<<<<<<< Updated upstream
-=======
-(X) Tj
->>>>>>> Stashed changes
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 342 510 Tm
-(CA) Tj
 T*
 ET
 BT
 1 0 0 1 268 485 Tm
-<<<<<<< Updated upstream
-=======
-(X) Tj
->>>>>>> Stashed changes
+( ) Tj
 T*
 ET
 BT
 1 0 0 1 380 680 Tm
-(INS123456) Tj
 T*
 ET
 BT
 1 0 0 1 488 583 Tm
-(123 456\0557890) Tj
 T*
 ET
 BT
 1 0 0 1 380 560 Tm
-(POL987654) Tj
 T*
 ET
 BT
 1 0 0 1 407 533 Tm
-(03\05715\0571980) Tj
 T*
 ET
 BT
@@ -2089,12 +1987,10 @@ T*
 ET
 BT
 1 0 0 1 380 510 Tm
-(ABC Corporation) Tj
 T*
 ET
 BT
 1 0 0 1 380 484 Tm
-(XYZ Health Plan) Tj
 T*
 ET
 BT
@@ -2104,57 +2000,46 @@ T*
 ET
 BT
 1 0 0 1 420 420 Tm
-(John Doe) Tj
 T*
 ET
 BT
 1 0 0 1 110 420 Tm
-(Jane Doe) Tj
 T*
 ET
 BT
 1 0 0 1 310 420 Tm
-(10\0572\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 27 390 Tm
-(01\05720\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 280 390 Tm
-(12\05701\0572023) Tj
 T*
 ET
 BT
 1 0 0 1 410 390 Tm
-(01\05720\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 505 390 Tm
-(02\05705\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 27 364 Tm
-(Dr\056 John Smith) Tj
 T*
 ET
 BT
 1 0 0 1 220 364 Tm
-(RP123456) Tj
 T*
 ET
 BT
 1 0 0 1 410 364 Tm
-(01\05725\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 505 364 Tm
-(02\05702\0572024) Tj
 T*
 ET
 BT
@@ -2164,112 +2049,94 @@ T*
 ET
 BT
 1 0 0 1 462 342 Tm
-(\044250) Tj
+(350) Tj
 T*
 ET
 BT
 1 0 0 1 380 317 Tm
-(07) Tj
 T*
 ET
 BT
 1 0 0 1 462 317 Tm
-(OR987654) Tj
 T*
 ET
 BT
 1 0 0 1 380 297 Tm
-(PA123456) Tj
 T*
 ET
 BT
 1 0 0 1 41 317 Tm
-(J11\0561) Tj
+(cronic lower back pain) Tj
 T*
 ET
 BT
 1 0 0 1 41 295 Tm
-(E11\0569) Tj
+(disc degeneration) Tj
 T*
 ET
 BT
 1 0 0 1 240 317 Tm
-(I10) Tj
 T*
 ET
 BT
 1 0 0 1 240 295 Tm
-(M54\0565) Tj
 T*
 ET
 BT
 1 0 0 1 23 245 Tm
-(02\05701\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 83 245 Tm
-(02\05710\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 154 245 Tm
-(2) Tj
 T*
 ET
 BT
 1 0 0 1 174 245 Tm
-(3) Tj
 T*
 ET
 BT
 1 0 0 1 200 245 Tm
-(99214) Tj
 T*
 ET
 BT
 1 0 0 1 324 245 Tm
-(J11\0561) Tj
 T*
 ET
 BT
 1 0 0 1 384 245 Tm
-(\044250) Tj
+(350) Tj
 T*
 ET
 BT
 1 0 0 1 444 245 Tm
-(1) Tj
 T*
 ET
 BT
 1 0 0 1 464 245 Tm
-(No) Tj
 T*
 ET
 BT
 1 0 0 1 484 245 Tm
-(No) Tj
 T*
 ET
 BT
 1 0 0 1 504 245 Tm
-(No) Tj
 T*
 ET
 BT
 1 0 0 1 524 245 Tm
-(N\057A) Tj
 T*
 ET
 BT
 1 0 0 1 25 103 Tm
-(98\0557654321) Tj
 T*
 ET
 BT
 1 0 0 1 180 103 Tm
-(ACCT\05512345) Tj
 T*
 ET
 BT
@@ -2279,47 +2146,40 @@ T*
 ET
 BT
 1 0 0 1 390 103 Tm
-(\0441500) Tj
 T*
 ET
 BT
 1 0 0 1 470 103 Tm
-(\044200) Tj
+(150) Tj
 T*
 ET
 BT
 1 0 0 1 530 103 Tm
-(\0441300) Tj
+(200) Tj
 T*
 ET
 BT
 1 0 0 1 55 40 Tm
-(Dr\056 Emily Brown) Tj
 T*
 ET
 BT
 1 0 0 1 40 60 Tm
-(02\05710\0572024) Tj
 T*
 ET
 BT
 1 0 0 1 180 60 Tm
-(HealthCare Center\054 123 Wellness St) Tj
 T*
 ET
 BT
 1 0 0 1 380 60 Tm
-(Dr\056 Emily Brown\054 MD) Tj
 T*
 ET
 BT
 1 0 0 1 400 40 Tm
-(567890) Tj
 T*
 ET
 BT
 1 0 0 1 500 40 Tm
-(G12345) Tj
 T*
 ET
 Q
@@ -2335,27 +2195,15 @@ xref
 0000000120 00000 n 
 0000000169 00000 n 
 0000000464 00000 n 
-<<<<<<< Updated upstream
-0000031096 00000 n 
-0000031167 00000 n 
-0000031237 00000 n 
-0000031307 00000 n 
-0000031414 00000 n 
-0000031512 00000 n 
-0000032827 00000 n 
-0000032930 00000 n 
-0000033205 00000 n 
-=======
-0000030640 00000 n 
-0000030711 00000 n 
-0000030781 00000 n 
-0000030851 00000 n 
-0000030958 00000 n 
-0000031056 00000 n 
-0000032371 00000 n 
-0000032474 00000 n 
-0000032749 00000 n 
->>>>>>> Stashed changes
+0000030238 00000 n 
+0000030309 00000 n 
+0000030379 00000 n 
+0000030449 00000 n 
+0000030556 00000 n 
+0000030654 00000 n 
+0000031969 00000 n 
+0000032072 00000 n 
+0000032347 00000 n 
 trailer
 <<
 /Size 15
@@ -2363,9 +2211,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-<<<<<<< Updated upstream
-54261
-=======
-53349
->>>>>>> Stashed changes
+52545
 %%EOF
