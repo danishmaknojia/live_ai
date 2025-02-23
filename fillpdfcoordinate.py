@@ -13,6 +13,7 @@ GRID_SPACING = 20  # Adjust for density
 # Example dynamic variables (to be assigned actual values elsewhere in the code)
 insured_name = "John Doe"
 insured_address = "123 Main St, Apt 4B"
+<<<<<<< Updated upstream
 insured_city = "New York"
 insured_state = "NY"
 insured_zip = "10001"
@@ -22,20 +23,37 @@ insurance_programs = {
     "CHAMPUS": "",
     "CHAMPVA": "",
     "Group_Health_Plan": "",
+=======
+insurance_programs = {
+    "Medicare": "X",
+    "Medicaid": "X",
+    "CHAMPUS": "X",
+    "CHAMPVA": "X",
+    "Group_Health_Plan": "X",
+>>>>>>> Stashed changes
     "FECA Black_Lung": "X",
-    "Other": "",
+    "Other": "X",
 }
 
 patient_name = "Jane Doe"
 patient_birth_date = "02/14/1985"
+<<<<<<< Updated upstream
 patient_sex = "X"  # "F"
+=======
+patient_sex = "F"  # "M" or "F"
+>>>>>>> Stashed changes
 patient_address = "456 Elm St, Apt 23"
 patient_city = "Los Angeles"
 patient_state = "CA"
 patient_zip = "90001"
 patient_phone = "555-123-4567"
+<<<<<<< Updated upstream
 patient_relationship = "X"  # single
 patient_status = "X"  # employment
+=======
+patient_relationship = "X"
+patient_status = "X"
+>>>>>>> Stashed changes
 
 other_insured_name = "Mike Johnson"
 other_insured_policy = "G123456789"
@@ -45,10 +63,17 @@ other_insured_employer = "ABC Corporation"
 other_insured_insurance_plan = "XYZ Health Plan"
 other_insured_reserved_use = "N/A"
 
+<<<<<<< Updated upstream
 condition_employment = "X"  # Yes
 condition_auto_accident = ""
 condition_auto_accident_place = "CA"
 condition_other_accident = ""
+=======
+condition_employment = "X"
+condition_auto_accident = "X"
+condition_auto_accident_place = "CA"
+condition_other_accident = "X"
+>>>>>>> Stashed changes
 
 Date_of_Current_Illness_Injury_or_Pregnancy = "01/15/2024"
 First_Date_of_Similar_Illness = "12/01/2023"
