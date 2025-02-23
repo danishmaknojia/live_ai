@@ -1,3 +1,4 @@
+import base64
 import os
 import io
 import json
@@ -135,49 +136,7 @@ def extract_text_from_image(image):
 def process_text_with_gemini(text, output_file="gemini_response.txt"):
     """Uses Gemini API to extract structured data from text and saves response to a txt file."""
     headers = {"Content-Type": "application/json"}
-    # payload = {
-    #     "contents": [
-    #         {
-    #             "parts": [
-    #                 {
-    #                     "text": "Extract relevant structured information from the following text and return it as a JSON object, I am doing this to fill out fields in the CMS 1500 Form (Health Insurance Claims):"
-    #                 },
-    #                 {"text": text},
-    #                 {
-    #                     "text": "Ensure the response is in JSON format (double check that there is no errors) with only the following fields if any fields are missing set the value of the fields as an EMPTY string. Additionally, we need to return all these fields for a form so make sure you return them:"
-    #                     + ", ".join(EXTRACT_FIELDS)
-    #                 },
-    #             ]
-    #         }
-    #     ]
-    # }
 
-    # payload = {
-    #     "contents": [
-    #         {
-    #             "parts": [
-    #                 {
-    #                     "text": (
-    #                         "Extract relevant structured information from the following text **exactly** as a JSON object, "
-    #                         "without explanations or extra text. This JSON is used to fill out a CMS 1500 Health Insurance Claims form.\n\n"
-    #                         "IMPORTANT:\n"
-    #                         "- The response **must** be a **valid JSON object** with **double quotes for keys & values**.\n"
-    #                         '- If a field is missing, set its value as an **empty string (`""`)** (do not use `null`).\n'
-    #                         "- **Do not insert extra spaces, line breaks, or text outside the JSON**.\n"
-    #                         "- Ensure all fields listed below are included in the JSON output, even if they are empty.\n"
-    #                         "- **All date fields must be converted to `MM-DD-YYYY` format.** If the original date is not in this format, reformat it.\n"
-    #                         "- **The final response must be valid JSON that can be parsed without errors.**\n\n"
-    #                         "Extract these fields:\n"
-    #                         + json.dumps(EXTRACT_FIELDS, indent=2)
-    #                         + "\n\n"
-    #                         "Now extract data from the following text and return only the valid JSON response:"
-    #                     )
-    #                 },
-    #                 {"text": text},
-    #             ]
-    #         }
-    #     ]
-    # }
     payload = {
         "contents": [
             {
@@ -249,45 +208,9 @@ def process_text_with_gemini(text, output_file="gemini_response.txt"):
         return "\n".join(cleaned_text)
 
 
-def main():
-    st.title("Medical Document Processing with Google Vision & Gemini AI")
-    input_option = st.radio("Select Input Method", ("Text", "Image"))
-    text_input = ""
-
-    if input_option == "Text":
-        text_input = st.text_area("Enter medical form text:")
-    elif input_option == "Image":
-        image_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
-        if image_file:
-            image = Image.open(image_file)
-            st.image(image, caption="Uploaded Image", use_column_width=True)
-            with st.spinner("Extracting text..."):
-                text_input = extract_text_from_image(image)
-                if "Error" not in text_input:
-                    st.success("Text extraction successful!")
-                else:
-                    st.error("No text detected. Please try another image.")
-
-    if st.button("Extract Information"):
-        if text_input and "Error" not in text_input:
-            with st.spinner("Processing text with Gemini AI..."):
-                extracted_info = process_text_with_gemini(text_input)
-                st.subheader("Extracted Information")
-                if isinstance(extracted_info, str):
-                    st.error(extracted_info)
-                else:
-                    st.json(extracted_info)
-                    json_data = json.dumps(extracted_info, indent=4)
-                    json_bytes = io.BytesIO(json_data.encode("utf-8"))
-                    st.download_button(
-                        "Download JSON",
-                        data=json_bytes,
-                        file_name="extracted_information.json",
-                        mime="application/json",
-                    )
-        else:
-            st.error("Please enter text or upload an image.")
-
-
-if __name__ == "__main__":
-    main()
+def display_pdf(pdf_path):
+    """Embed PDF in Streamlit using an iframe."""
+    with open(pdf_path, "rb") as pdf_file:
+        base64_pdf = base64.b64encode(pdf_file.read()).decode("utf-8")
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="800" type="application/pdf"></iframe>'
+    st.markdown(pdf_display, unsafe_allow_html=True)
