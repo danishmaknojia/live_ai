@@ -152,25 +152,51 @@ def process_text_with_gemini(text, output_file="gemini_response.txt"):
     #     ]
     # }
 
+    # payload = {
+    #     "contents": [
+    #         {
+    #             "parts": [
+    #                 {
+    #                     "text": (
+    #                         "Extract relevant structured information from the following text **exactly** as a JSON object, "
+    #                         "without explanations or extra text. This JSON is used to fill out a CMS 1500 Health Insurance Claims form.\n\n"
+    #                         "IMPORTANT:\n"
+    #                         "- The response **must** be a **valid JSON object** with **double quotes for keys & values**.\n"
+    #                         '- If a field is missing, set its value as an **empty string (`""`)** (do not use `null`).\n'
+    #                         "- **Do not insert extra spaces, line breaks, or text outside the JSON**.\n"
+    #                         "- Ensure all fields listed below are included in the JSON output, even if they are empty.\n"
+    #                         "- **All date fields must be converted to `MM-DD-YYYY` format.** If the original date is not in this format, reformat it.\n"
+    #                         "- **The final response must be valid JSON that can be parsed without errors.**\n\n"
+    #                         "Extract these fields:\n"
+    #                         + json.dumps(EXTRACT_FIELDS, indent=2)
+    #                         + "\n\n"
+    #                         "Now extract data from the following text and return only the valid JSON response:"
+    #                     )
+    #                 },
+    #                 {"text": text},
+    #             ]
+    #         }
+    #     ]
+    # }
     payload = {
         "contents": [
             {
                 "parts": [
                     {
                         "text": (
-                            "Extract relevant structured information from the following text **exactly** as a JSON object, "
-                            "without explanations or extra text. This JSON is used to fill out a CMS 1500 Health Insurance Claims form.\n\n"
-                            "IMPORTANT:\n"
-                            "- The response **must** be a **valid JSON object** with **double quotes for keys & values**.\n"
-                            '- If a field is missing, set its value as an **empty string (`""`)** (do not use `null`).\n'
-                            "- **Do not insert extra spaces, line breaks, or text outside the JSON**.\n"
-                            "- Ensure all fields listed below are included in the JSON output, even if they are empty.\n"
-                            "- **All date fields must be converted to `MM-DD-YYYY` format.** If the original date is not in this format, reformat it.\n"
-                            "- **The final response must be valid JSON that can be parsed without errors.**\n\n"
-                            "Extract these fields:\n"
+                            "Extract structured information from the following text as a **valid JSON object**.\n\n"
+                            "⚠️ **JSON Formatting Rules:**\n"
+                            '1. **Return only a valid JSON object** with **double quotes (`"`) for all keys and values**.\n'
+                            '2. **All missing fields must be empty strings (`""`)** – do not use `null`.\n'
+                            "3. **Ensure all fields listed below are included**, even if their values are empty.\n"
+                            "4. **Convert all date fields to `MM-DD-YYYY` format** (e.g., `February 10, 1979` → `02-10-1979`).\n"
+                            "5. **Extract only the street address** for `insured_address` and `patient_address` (omit city, state, zip).\n"
+                            "6. **Do not add explanations, line breaks, or extra text – return only the JSON.**\n"
+                            "7. **Ensure the response is properly escaped and does not contain formatting issues.**\n\n"
+                            "🚀 **Extract the following fields as JSON:**\n"
                             + json.dumps(EXTRACT_FIELDS, indent=2)
                             + "\n\n"
-                            "Now extract data from the following text and return only the valid JSON response:"
+                            "Now, extract the data from the text below and return **only the valid JSON response**:\n"
                         )
                     },
                     {"text": text},
@@ -186,7 +212,8 @@ def process_text_with_gemini(text, output_file="gemini_response.txt"):
     )
 
     if response.status_code != 200:
-        error_message = f"Gemini API Error: {response.status_code} - {response.text}"
+        # error_message = f"Gemini API Error: {response.status_code} - {response.text}
+        error_message = {response.text}
         with open(output_file, "w") as file:
             file.write(error_message)
         return error_message
@@ -208,12 +235,18 @@ def process_text_with_gemini(text, output_file="gemini_response.txt"):
 
         return json_data
     except json.JSONDecodeError:
-        error_message = (
-            f"Gemini Processing Error: Invalid JSON response - {structured_text}"
-        )
+        # Save raw text and remove unwanted formatting
+        cleaned_text = structured_text.strip().split("\n")
+
+        if cleaned_text[0].strip() == "```json":
+            cleaned_text.pop(0)
+        if cleaned_text[-1].strip() == "```":
+            cleaned_text.pop()
+
         with open(output_file, "w") as file:
-            file.write(error_message)
-        return error_message
+            file.write("\n".join(cleaned_text))
+
+        return "\n".join(cleaned_text)
 
 
 def main():

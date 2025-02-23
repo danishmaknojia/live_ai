@@ -12,8 +12,6 @@ GRID_SPACING = 20  # Adjust for density
 
 import json
 
-# Load data from JSON file
-import json
 
 # Load JSON file and replace all null values with empty strings
 with open("gemini_response.txt", "r") as file:
@@ -37,15 +35,17 @@ insured_state = data.get("insured_state", "")
 insured_zip = data.get("insured_zip", "")
 
 insurance_programs = {
-    "Medicare": data.get("insurance_programs", {}).get("Medicare", ""),
-    "Medicaid": data.get("insurance_programs", {}).get("Medicaid", ""),
-    "CHAMPUS": data.get("insurance_programs", {}).get("CHAMPUS", ""),
-    "CHAMPVA": data.get("insurance_programs", {}).get("CHAMPVA", ""),
-    "Group_Health_Plan": data.get("insurance_programs", {}).get(
-        "Group_Health_Plan", ""
+    "Medicare": "X" if data.get("insurance_programs", {}).get("Medicare") else "",
+    "CHAMPUS": "X" if data.get("insurance_programs", {}).get("CHAMPUS") else "",
+    "CHAMPVA": "X" if data.get("insurance_programs", {}).get("CHAMPVA") else "",
+    "Medicaid": "X" if data.get("insurance_programs", {}).get("Medicaid") else "",
+    "FECA Black_Lung": (
+        "X" if data.get("insurance_programs", {}).get("FECA Black_Lung") else ""
     ),
-    "FECA Black_Lung": data.get("insurance_programs", {}).get("FECA Black_Lung", ""),
-    "Other": data.get("insurance_programs", {}).get("Other", ""),
+    "Other": "X" if data.get("insurance_programs", {}).get("Other") else "",
+    "Group_Health_Plan": (
+        "X" if data.get("insurance_programs", {}).get("Group_Health_Plan") else ""
+    ),
 }
 
 patient_name = data.get("patient_name", "")
