@@ -13,132 +13,190 @@ adjust_sex_coord = lambda sex, x, y: (
     (sex, x - 10, y) if sex == "F" else (sex, x - 48, y)
 )
 
-adjust_Patient_Relationship_to_Insured = lambda relation, x, y: (
-    (relation, x - 10, y) if relation == "F" else (relation, x - 48, y)
-)
-
 # Data to overlay (adjust coordinates as needed)
-form_data = form_data = {
-    "INSURED’S NAME": ("John Doe", 377, 657),
-    "INSURED’S ADDRESS": ("456 Elm St, Apt 23", 377, 630),
+# Example dynamic variables (to be assigned actual values elsewhere in the code)
+insured_name = "John Doe"
+insured_address = "123 Main St, Apt 4B, New York, NY 10001"
+insurance_programs = {
+    "Medicare": "X",
+    "Medicaid": "X",
+    "CHAMPUS": "X",
+    "CHAMPVA": "X",
+    "Group_Health_Plan": "",
+    "FECA Black_Lung": "X",
+    "Other": "",
+}
+
+patient_name = "Jane Doe"
+patient_birth_date = "02/14/1985"
+patient_sex = "F"  # "M" or "F"
+patient_address = "456 Elm St, Apt 23, Los Angeles, CA 90001"
+patient_city = "Los Angeles"
+patient_state = "CA"
+patient_zip = "90001"
+patient_phone = "555-123-4567"
+patient_relationship = "Spouse"
+patient_status = "Single"
+
+other_insured_name = "Mike Johnson"
+other_insured_policy = "G123456789"
+other_insured_birth_date = "06/10/1978"
+other_insured_sex = "M"
+other_insured_employer = "ABC Corporation"
+other_insured_insurance_plan = "XYZ Health Plan"
+other_insured_reserved_use = "N/A"
+
+condition_employment = "Yes"
+condition_auto_accident = "No"
+condition_auto_accident_place = "California"
+condition_other_accident = "No"
+
+Date_of_Current_Illness_Injury_or_Pregnancy = "01/15/2024"
+First_Date_of_Similar_Illness = "12/01/2023"
+Dates_Patient_Unable_to_Work_From = "01/20/2024"
+Dates_Patient_Unable_to_Work_To = "02/05/2024"
+Referring_Physician_Name = "Dr. John Smith"
+Referring_Physician_ID = "RP123456"
+Hospitalization_Dates_From = "01/25/2024"
+Hospitalization_Dates_To = "02/02/2024"
+Outside_Lab = "X"
+Charges = "500"
+Medicaid_Resubmission_Code = "07"
+Original_Reference_Number = "OR987654"
+Prior_Authorization_Number = "PA123456"
+Diagnosis_1 = "J11.1"
+Diagnosis_2 = "E11.9"
+Diagnosis_3 = "I10"
+Diagnosis_4 = "M54.5"
+Date_of_Service_From = "02/01/2024"
+Date_of_Service_To = "02/10/2024"
+Place_of_Service = "2"
+Type_of_Service = "3"
+Procedures_CPT_HCPCS_Modifier = "99214"
+Diagnosis_Code = "J11.1"
+Charges = "$250"
+Days_or_Units = "1"
+EPSDT_or_Family_Plan = "No"
+EMG = "No"
+COB = "No"
+Reserved_for_Local_Use = "N/A"
+Federal_Tax_ID = "98-7654321"
+Patient_Account_Number = "ACCT-12345"
+Accept_Assignment = "X"
+Total_Charge = "$1500"
+Amount_Paid = "$200"
+Balance_Due = "$1300"
+Physician_Supplier_Signature = "Dr. Emily Brown"
+Signed_Date = "02/10/2024"
+Facility_Name_and_Address = "HealthCare Center, 123 Wellness St"
+Physician_Supplier_Billing_Name_and_Address = "Dr. Emily Brown, MD"
+PIN = "567890"
+Group_Number = "G12345"
+signed_date = "10/2/2024"
+
+
+# Form data mapping
+form_data = {
+    "INSURED’S NAME": (insured_name, 377, 657),
+    "INSURED’S ADDRESS": (insured_address, 377, 630),
     "Insurance_Programs": {
-        "Medicare": ("X", 25, 677),
-        "Medicaid": ("X", 75, 677),
-        "CHAMPUS": ("X", 125, 677),
-        "CHAMPVA": ("X", 189, 677),
-        "Group_Health_Plan": ("X", 240, 677),
-        "FECA Black_Lung": ("X", 298, 677),
-        "Other": ("X", 342, 677),
+        "Medicare": (insurance_programs["Medicare"], 25, 677),
+        "Medicaid": (insurance_programs["Medicaid"], 75, 677),
+        "CHAMPUS": (insurance_programs["CHAMPUS"], 125, 677),
+        "CHAMPVA": (insurance_programs["CHAMPVA"], 189, 677),
+        "Group_Health_Plan": (insurance_programs["Group_Health_Plan"], 240, 677),
+        "FECA Black_Lung": (insurance_programs["FECA Black_Lung"], 298, 677),
+        "Other": (insurance_programs["Other"], 342, 677),
     },
     "Patient_Information": {
-        "Patient_Name": ("Jane Doe", 25, 657),
-        "Patient_Birth_Date": ("02/14/1985", 235, 654),
-        "Sex": adjust_sex_coord("M", 367, 654),
-        "Patient_Address": ("789 Oak Ave", 25, 630),
-        "City": ("Los Angeles", 25, 610),
-        "State": ("CA", 205, 610),
-        "Zip_Code": ("90001", 25, 582),
-        "Telephone": ("555-123-4567", 127, 582),
-        "Patient_Relationship_to_Insured": ("Spouse", 110, 555),
-        "Patient_Status": ("Single", 310, 555),
+        "Patient_Name": (patient_name, 25, 657),
+        "Patient_Birth_Date": (patient_birth_date, 235, 654),
+        "Sex": adjust_sex_coord(patient_sex, 367, 654),
+        "Patient_Address": (patient_address, 25, 630),
+        "City": (patient_city, 25, 610),
+        "State": (patient_state, 205, 610),
+        "Zip_Code": (patient_zip, 25, 582),
+        "Telephone": (patient_phone, 127, 582),
+        "Patient_Relationship_to_Insured": (patient_relationship, 255, 630),
+        "Patient_Status": (patient_status, 269, 605),
     },
     "Other_Insured_Information": {
-        "Other_Insured_Name": ("Mike Johnson", 110, 525),
-        "Other_Insured_Policy_or_Group_Number": ("G123456789", 310, 525),
-        "Other_Insured_Birth_Date": ("06/10/1978", 450, 525),
-        "Sex": ("M", 550, 525),
-        "Employer_or_School_Name": ("ABC Corp", 110, 505),
-        "Insurance_Plan_Name_or_Program_Name": ("XYZ Health", 310, 505),
-        "Reserved_for_Local_Use": ("N/A", 450, 505),
+        "Other_Insured_Name": (other_insured_name, 25, 558),
+        "Other_Insured_Policy_or_Group_Number": (other_insured_policy, 25, 535),
+        "Other_Insured_Birth_Date": (other_insured_birth_date, 25, 508),
+        "Sex": (other_insured_sex, 146, 508),
+        "Employer_or_School_Name": (other_insured_employer, 25, 488),
+        "Insurance_Plan_Name_or_Program_Name": (other_insured_insurance_plan, 25, 465),
+        "Reserved_for_Local_Use": (other_insured_reserved_use, 250, 465),
     },
     "Condition_Related_To": {
-        "Employment": ("Yes", 110, 475),
-        "Auto_Accident": ("No", 310, 475),
-        "Place": ("California", 450, 475),
-        "Other_Accident": ("No", 550, 475),
+        "Employment": (condition_employment, 268, 535),
+        "Auto_Accident": (condition_auto_accident, 268, 510),
+        "Place": (condition_auto_accident_place, 342, 510),
+        "Other_Accident": (condition_other_accident, 268, 485),
     },
     "Authorization": {
-        "Patient_or_Authorized_Person_Signature": ("Jane Doe", 110, 445),
-        "Signed_Date": ("03/20/2024", 310, 445),
-    },
-    "Insured": {
-        "Insured_ID_Number": ("A987654321", 110, 415),
-        "Insured_Name": ("John Doe", 310, 415),
-        "Insured_Address": ("456 Elm St, Apt 23", 450, 415),
-        "City": ("Chicago", 550, 415),
-        "State": ("IL", 650, 415),
-        "Zip_Code": ("60610", 750, 415),
-        "Telephone": ("555-789-1234", 850, 415),
-        "Insured_Policy_Group_or_FECA_Number": ("G345678901", 110, 385),
-        "Insured_Birth_Date": ("07/20/1980", 310, 385),
-        "Sex": ("M", 450, 385),
-        "Employer_or_School_Name": ("Tech Solutions", 550, 385),
-        "Insurance_Plan_Name_or_Program_Name": ("Blue Shield", 700, 385),
-        "Another_Health_Benefit_Plan": ("No", 850, 385),
-        "Insured_or_Authorized_Person_Signature": ("John Doe", 110, 355),
+        "Patient_or_Authorized_Person_Signature": (patient_name, 110, 445),
+        "Signed_Date": (signed_date, 310, 445),
     },
     "Medical_Information": {
-        "Date_of_Current_Illness_Injury_or_Pregnancy": ("02/01/2024", 110, 325),
-        "First_Date_of_Similar_Illness": ("01/15/2024", 310, 325),
-        "Dates_Patient_Unable_to_Work": {
-            "From": ("02/02/2024", 110, 295),
-            "To": ("02/15/2024", 250, 295),
-        },
-        "Referring_Physician_Name": ("Dr. Emily Brown", 450, 295),
-        "Referring_Physician_ID": ("MD67890", 600, 295),
-        "Hospitalization_Dates": {
-            "From": ("02/05/2024", 110, 265),
-            "To": ("02/10/2024", 250, 265),
-        },
-        "Outside_Lab": ("Yes", 450, 265),
-        "Charges": ("$1200", 600, 265),
-        "Medicaid_Resubmission_Code": ("N/A", 750, 265),
-        "Original_Reference_Number": ("ABC123", 900, 265),
-        "Prior_Authorization_Number": ("PA56789", 1050, 265),
-        "Diagnosis_or_Nature_of_Illness_or_Injury": {
-            "Diagnosis_1": ("Flu", 110, 235),
-            "Diagnosis_2": ("Fever", 250, 235),
-            "Diagnosis_3": ("Cough", 450, 235),
-            "Diagnosis_4": ("N/A", 600, 235),
-        },
+        "Date_of_Current_Illness_Injury_or_Pregnancy": (
+            Dates_Patient_Unable_to_Work_From,
+            27,
+            390,
+        ),
+        "First_Date_of_Similar_Illness": (First_Date_of_Similar_Illness, 280, 390),
+        "Dates_Patient_Unable_to_Work_From": (
+            Dates_Patient_Unable_to_Work_From,
+            410,
+            390,
+        ),
+        "Dates_Patient_Unable_to_Work_To": (Dates_Patient_Unable_to_Work_To, 505, 390),
+        "Referring_Physician_Name": (Referring_Physician_Name, 27, 364),
+        "Referring_Physician_ID": (Referring_Physician_ID, 220, 364),
+        "Hospitalization_Dates_From": (Hospitalization_Dates_From, 410, 364),
+        "Hospitalization_Dates_To": (Hospitalization_Dates_To, 505, 364),
+        "Outside_Lab": (Outside_Lab, 390, 342),
+        "Lab_Charges": (Charges, 462, 342),  # Avoid duplicate "Charges"
+        "Medicaid_Resubmission_Code": (Medicaid_Resubmission_Code, 380, 317),
+        "Original_Reference_Number": (Original_Reference_Number, 462, 317),
+        "Prior_Authorization_Number": (Prior_Authorization_Number, 380, 297),
+        "Diagnosis_1": (Diagnosis_1, 41, 317),
+        "Diagnosis_2": (Diagnosis_2, 41, 295),
+        "Diagnosis_3": (Diagnosis_3, 240, 317),
+        "Diagnosis_4": (Diagnosis_4, 240, 295),
     },
     "Procedures_Services_Supplies": {
-        "Service_Entries": [
-            {
-                "Date_of_Service": {
-                    "From": ("02/07/2024", 110, 205),
-                    "To": ("02/07/2024", 250, 205),
-                },
-                "Place_of_Service": ("Clinic", 450, 205),
-                "Type_of_Service": ("Consultation", 600, 205),
-                "Procedures_CPT_HCPCS_Modifier": ("99214", 750, 205),
-                "Diagnosis_Code": ("J11.1", 900, 205),
-                "Charges": ("$250", 1050, 205),
-                "Days_or_Units": ("1", 1200, 205),
-                "EPSDT_or_Family_Plan": ("No", 1350, 205),
-                "EMG": ("No", 1500, 205),
-                "COB": ("No", 1650, 205),
-                "Reserved_for_Local_Use": ("N/A", 1800, 205),
-            }
-        ]
+        "Date_of_Service_From": (Date_of_Service_From, 23, 245),
+        "Date_of_Service_To": (Date_of_Service_To, 83, 245),
+        "Place_of_Service": (Place_of_Service, 154, 245),
+        "Type_of_Service": (Type_of_Service, 174, 245),
+        "Procedures_CPT_HCPCS_Modifier": (Procedures_CPT_HCPCS_Modifier, 200, 245),
+        "Diagnosis_Code": (Diagnosis_Code, 324, 245),
+        "Procedure_Charges": (Charges, 384, 245),  # Differentiate from lab charges
+        "Days_or_Units": (Days_or_Units, 444, 245),
+        "EPSDT_or_Family_Plan": (EPSDT_or_Family_Plan, 464, 245),
+        "EMG": (EMG, 484, 245),
+        "COB": (COB, 504, 245),
+        "Reserved_for_Local_Use": (Reserved_for_Local_Use, 524, 245),
     },
     "Billing_Information": {
-        "Federal_Tax_ID": ("98-7654321", 110, 175),
-        "Patient_Account_Number": ("ACCT-12345", 250, 175),
-        "Accept_Assignment": ("Yes", 450, 175),
-        "Total_Charge": ("$1500", 600, 175),
-        "Amount_Paid": ("$200", 750, 175),
-        "Balance_Due": ("$1300", 900, 175),
-        "Physician_Supplier_Signature": ("Dr. Emily Brown", 1050, 175),
-        "Signed_Date": ("02/10/2024", 1200, 175),
-        "Facility_Name_and_Address": ("HealthCare Center, 123 Wellness St", 110, 145),
+        "Federal_Tax_ID": (Federal_Tax_ID, 25, 103),
+        "Patient_Account_Number": (Patient_Account_Number, 180, 103),
+        "Accept_Assignment": (Accept_Assignment, 290, 103),
+        "Total_Charge": (Total_Charge, 390, 103),
+        "Amount_Paid": (Amount_Paid, 470, 103),
+        "Balance_Due": (Balance_Due, 530, 103),
+        "Physician_Supplier_Signature": (Physician_Supplier_Signature, 55, 40),
+        "Signed_Date": (Signed_Date, 40, 60),
+        "Facility_Name_and_Address": (Facility_Name_and_Address, 180, 60),
         "Physician_Supplier_Billing_Name_and_Address": (
-            "Dr. Emily Brown, MD",
-            450,
-            145,
+            Physician_Supplier_Billing_Name_and_Address,
+            380,
+            60,
         ),
-        "PIN": ("567890", 750, 145),
-        "Group_Number": ("G12345", 900, 145),
+        "PIN": (PIN, 400, 40),
+        "Group_Number": (Group_Number, 500, 40),
     },
 }
 
