@@ -56,7 +56,7 @@ patient_city = data.get("patient_city", "")
 patient_state = data.get("patient_state", "")
 patient_zip = data.get("patient_zip", "")
 patient_phone = data.get("patient_phone", "") or " "
-patient_relationship = data.get("patient_relationship", "")
+patient_relationship = "X" if data.get("patient_relationship") else ""
 patient_status = data.get("patient_status", "")
 
 other_insured_name = data.get("other_insured_name", "")
@@ -299,19 +299,6 @@ packet = BytesIO()
 can = canvas.Canvas(packet, pagesize=letter)
 width, height = letter  # Get page size
 
-# Draw grid lines
-# can.setStrokeColorRGB(0.8, 0.8, 0.8)  # Light gray grid color
-# can.setLineWidth(0.5)
-
-# Vertical grid lines
-# for x in range(0, int(width), GRID_SPACING):
-#     can.line(x, 0, x, height)
-#     can.drawString(x + 2, 5, str(x))  # Label x-axis
-
-# Horizontal grid lines
-# for y in range(0, int(height), GRID_SPACING):
-#     can.line(0, y, width, y)
-#     can.drawString(2, y + 2, str(y))  # Label y-axis
 
 # Draw text at specified positions
 can.setStrokeColorRGB(0, 0, 0)  # Black text color
