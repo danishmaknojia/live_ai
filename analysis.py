@@ -199,20 +199,20 @@ def analysis():
     "Insurance_Plan_Name": "Blue Shield",
     "Another_Health_Benefit_Plan": null,
     "Insured_or_Authorized_Person_Signature": null
-    }  In a single sentence tell me if I'm at a higher risk of not getting approved. if so then why?", """
+    }  In a single sentence tell me if I'm at a higher risk of not getting approved. if so then why?",Then give pointers as feedback\n """
                 ],
             },
             {
                 "role": "model",
                 "parts": [
-                    "Based on the provided data, you are at a higher risk of claim denial due to inconsistencies and missing information, particularly regarding the insured's details and the relationships between the patient and insured, as well as other fields like Tax ID. Make sure your answer is a single sentence\n",
+                    'Based on the provided data, there are several inconsistencies and missing fields that significantly increase the risk of claim denial.\n\nHere are pointers for improvement:\n\n*   *Insured Information:* Fill in all missing ⁠ insured_address ⁠, ⁠ insured_city ⁠, ⁠ insured_state ⁠, ⁠ insured_zip ⁠ fields. Make sure the data is consistent with the insurance company\'s records for John Doe. Also fill in the ⁠ Insured_Birth_Date ⁠ and ⁠ Sex ⁠ of the insured.\n*   *Patient Information:* The patient\'s sex is listed as "M" (male) while the ⁠ patient_name ⁠ is "Jane Doe", indicating a female. Correct this inconsistency to accurately reflect the patient\'s sex. ⁠ patient_relationship ⁠ and ⁠ patient_status ⁠ are missing\n*   *Insurance Information:* You have information for "Other Insured" (Mike Johnson, XYZ Health), ensure this section is completed if Jane Doe is covered under another policy. Clarify the relationship between the insured (John Doe) and the patient (Jane Doe) in the ⁠ patient_relationship ⁠ field.\n*   *Condition Information:*  If the current illness is related to employment, auto accident, or other accident, populate the corresponding fields accurately. If none apply, consider marking them as "No" or leaving them blank if appropriate.\n*   *Referring Physician Information:* Make sure you have all of the necessary NPI and taxonomy information for the referrring physician.\n*   *Diagnosis Codes:* While you have "Flu (J11.1)" as Diagnosis_1, Diagnosis_2 and Diagnosis_3 are just descriptive ("Fever," "Cough"). Replace these with appropriate ICD-10 codes for accurate billing.\n*   *Service Line Details:* The ⁠ Diagnosis_Code ⁠ field is missing for the service line (procedure 99214). You *must* link the procedure code to at least one relevant diagnosis code (Diagnosis 1, Diagnosis 2, etc.). The ⁠ Days_or_Units ⁠ field is also missing\n*   *Billing Provider Information:* Fill in ⁠ Federal_Tax_ID ⁠, ⁠ PIN ⁠, ⁠ Telephone ⁠ of provider\n*   *Assignment and Signature:* Determine if you ⁠ Accept_Assignment ⁠,  the ⁠ Physician_Supplier_Signature ⁠ and ⁠ Signed_Date ⁠ are missing.\n*   *Total Charges and Amounts:* The sum of all ⁠ Procedure_Charges ⁠ should equal the ⁠ Total_Charge ⁠. Here your listed single procedure charge is $250, but your total charge is $1500. You need to have an itemized line by line breakdown of all procedures performed for the total charge. Ensure these figures are accurate.\n*   *Dates:* Verify all dates are in the correct format (MM-DD-YYYY) and logical sequence. ⁠ signed_date ⁠ is missing.\n\nAddressing these issues will significantly improve the likelihood of claim approval.\n',
                 ],
             },
         ]
     )
 
     response = chat_session.send_message(
-        f"This is my data that im filling in the CMS1500 claim form:\n{query_string}\n In a single sentence tell me if I'm at a higher risk of not getting approve. if so then why?"
+        f"This is my data that im filling in the CMS1500 claim form:\n{query_string}\n In a single sentence tell me if I'm at a higher risk of not getting approve. if so then why? Then give pointers as feedback\n\n"
     )
 
     return response.text
