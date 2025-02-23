@@ -44,7 +44,7 @@ endobj
 endobj
 5 0 obj
 <<
-/Length 27130
+/Length 30775
 >>
 stream
 q
@@ -711,13 +711,438 @@ T*
 ET
 0 0 0 RG
 BT
-1 0 0 1 30 660 Tm
+1 0 0 1 377 657 Tm
 (John Doe) Tj
 T*
 ET
 BT
-1 0 0 1 375 630 Tm
-(123 Main St) Tj
+1 0 0 1 377 630 Tm
+(456 Elm St\054 Apt 23) Tj
+T*
+ET
+BT
+1 0 0 1 25 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 75 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 125 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 189 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 240 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 298 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 342 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 25 657 Tm
+(Jane Doe) Tj
+T*
+ET
+BT
+1 0 0 1 235 654 Tm
+(02\05714\0571985) Tj
+T*
+ET
+BT
+1 0 0 1 319 654 Tm
+(M) Tj
+T*
+ET
+BT
+1 0 0 1 25 630 Tm
+(789 Oak Ave) Tj
+T*
+ET
+BT
+1 0 0 1 25 610 Tm
+(Los Angeles) Tj
+T*
+ET
+BT
+1 0 0 1 205 610 Tm
+(CA) Tj
+T*
+ET
+BT
+1 0 0 1 25 582 Tm
+(90001) Tj
+T*
+ET
+BT
+1 0 0 1 127 582 Tm
+(555\055123\0554567) Tj
+T*
+ET
+BT
+1 0 0 1 110 555 Tm
+(Spouse) Tj
+T*
+ET
+BT
+1 0 0 1 310 555 Tm
+(Single) Tj
+T*
+ET
+BT
+1 0 0 1 110 525 Tm
+(Mike Johnson) Tj
+T*
+ET
+BT
+1 0 0 1 310 525 Tm
+(G123456789) Tj
+T*
+ET
+BT
+1 0 0 1 450 525 Tm
+(06\05710\0571978) Tj
+T*
+ET
+BT
+1 0 0 1 550 525 Tm
+(M) Tj
+T*
+ET
+BT
+1 0 0 1 110 505 Tm
+(ABC Corp) Tj
+T*
+ET
+BT
+1 0 0 1 310 505 Tm
+(XYZ Health) Tj
+T*
+ET
+BT
+1 0 0 1 450 505 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 110 475 Tm
+(Yes) Tj
+T*
+ET
+BT
+1 0 0 1 310 475 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 450 475 Tm
+(California) Tj
+T*
+ET
+BT
+1 0 0 1 550 475 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 110 445 Tm
+(Jane Doe) Tj
+T*
+ET
+BT
+1 0 0 1 310 445 Tm
+(03\05720\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 110 415 Tm
+(A987654321) Tj
+T*
+ET
+BT
+1 0 0 1 310 415 Tm
+(John Doe) Tj
+T*
+ET
+BT
+1 0 0 1 450 415 Tm
+(456 Elm St\054 Apt 23) Tj
+T*
+ET
+BT
+1 0 0 1 550 415 Tm
+(Chicago) Tj
+T*
+ET
+BT
+1 0 0 1 650 415 Tm
+(IL) Tj
+T*
+ET
+BT
+1 0 0 1 750 415 Tm
+(60610) Tj
+T*
+ET
+BT
+1 0 0 1 850 415 Tm
+(555\055789\0551234) Tj
+T*
+ET
+BT
+1 0 0 1 110 385 Tm
+(G345678901) Tj
+T*
+ET
+BT
+1 0 0 1 310 385 Tm
+(07\05720\0571980) Tj
+T*
+ET
+BT
+1 0 0 1 450 385 Tm
+(M) Tj
+T*
+ET
+BT
+1 0 0 1 550 385 Tm
+(Tech Solutions) Tj
+T*
+ET
+BT
+1 0 0 1 700 385 Tm
+(Blue Shield) Tj
+T*
+ET
+BT
+1 0 0 1 850 385 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 110 355 Tm
+(John Doe) Tj
+T*
+ET
+BT
+1 0 0 1 110 325 Tm
+(02\05701\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 310 325 Tm
+(01\05715\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 110 295 Tm
+(02\05702\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 250 295 Tm
+(02\05715\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 450 295 Tm
+(Dr\056 Emily Brown) Tj
+T*
+ET
+BT
+1 0 0 1 600 295 Tm
+(MD67890) Tj
+T*
+ET
+BT
+1 0 0 1 110 265 Tm
+(02\05705\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 250 265 Tm
+(02\05710\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 450 265 Tm
+(Yes) Tj
+T*
+ET
+BT
+1 0 0 1 600 265 Tm
+(\0441200) Tj
+T*
+ET
+BT
+1 0 0 1 750 265 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 900 265 Tm
+(ABC123) Tj
+T*
+ET
+BT
+1 0 0 1 1050 265 Tm
+(PA56789) Tj
+T*
+ET
+BT
+1 0 0 1 110 235 Tm
+(Flu) Tj
+T*
+ET
+BT
+1 0 0 1 250 235 Tm
+(Fever) Tj
+T*
+ET
+BT
+1 0 0 1 450 235 Tm
+(Cough) Tj
+T*
+ET
+BT
+1 0 0 1 600 235 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 110 205 Tm
+(02\05707\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 250 205 Tm
+(02\05707\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 450 205 Tm
+(Clinic) Tj
+T*
+ET
+BT
+1 0 0 1 600 205 Tm
+(Consultation) Tj
+T*
+ET
+BT
+1 0 0 1 750 205 Tm
+(99214) Tj
+T*
+ET
+BT
+1 0 0 1 900 205 Tm
+(J11\0561) Tj
+T*
+ET
+BT
+1 0 0 1 1050 205 Tm
+(\044250) Tj
+T*
+ET
+BT
+1 0 0 1 1200 205 Tm
+(1) Tj
+T*
+ET
+BT
+1 0 0 1 1350 205 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 1500 205 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 1650 205 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 1800 205 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 110 175 Tm
+(98\0557654321) Tj
+T*
+ET
+BT
+1 0 0 1 250 175 Tm
+(ACCT\05512345) Tj
+T*
+ET
+BT
+1 0 0 1 450 175 Tm
+(Yes) Tj
+T*
+ET
+BT
+1 0 0 1 600 175 Tm
+(\0441500) Tj
+T*
+ET
+BT
+1 0 0 1 750 175 Tm
+(\044200) Tj
+T*
+ET
+BT
+1 0 0 1 900 175 Tm
+(\0441300) Tj
+T*
+ET
+BT
+1 0 0 1 1050 175 Tm
+(Dr\056 Emily Brown) Tj
+T*
+ET
+BT
+1 0 0 1 1200 175 Tm
+(02\05710\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 110 145 Tm
+(HealthCare Center\054 123 Wellness St) Tj
+T*
+ET
+BT
+1 0 0 1 450 145 Tm
+(Dr\056 Emily Brown\054 MD) Tj
+T*
+ET
+BT
+1 0 0 1 750 145 Tm
+(567890) Tj
+T*
+ET
+BT
+1 0 0 1 900 145 Tm
+(G12345) Tj
 T*
 ET
 Q
@@ -806,7 +1231,7 @@ endobj
 endobj
 14 0 obj
 <<
-/Length 17553
+/Length 21198
 >>
 stream
 q
@@ -1465,13 +1890,438 @@ T*
 ET
 0 0 0 RG
 BT
-1 0 0 1 30 660 Tm
+1 0 0 1 377 657 Tm
 (John Doe) Tj
 T*
 ET
 BT
-1 0 0 1 375 630 Tm
-(123 Main St) Tj
+1 0 0 1 377 630 Tm
+(456 Elm St\054 Apt 23) Tj
+T*
+ET
+BT
+1 0 0 1 25 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 75 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 125 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 189 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 240 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 298 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 342 677 Tm
+(X) Tj
+T*
+ET
+BT
+1 0 0 1 25 657 Tm
+(Jane Doe) Tj
+T*
+ET
+BT
+1 0 0 1 235 654 Tm
+(02\05714\0571985) Tj
+T*
+ET
+BT
+1 0 0 1 319 654 Tm
+(M) Tj
+T*
+ET
+BT
+1 0 0 1 25 630 Tm
+(789 Oak Ave) Tj
+T*
+ET
+BT
+1 0 0 1 25 610 Tm
+(Los Angeles) Tj
+T*
+ET
+BT
+1 0 0 1 205 610 Tm
+(CA) Tj
+T*
+ET
+BT
+1 0 0 1 25 582 Tm
+(90001) Tj
+T*
+ET
+BT
+1 0 0 1 127 582 Tm
+(555\055123\0554567) Tj
+T*
+ET
+BT
+1 0 0 1 110 555 Tm
+(Spouse) Tj
+T*
+ET
+BT
+1 0 0 1 310 555 Tm
+(Single) Tj
+T*
+ET
+BT
+1 0 0 1 110 525 Tm
+(Mike Johnson) Tj
+T*
+ET
+BT
+1 0 0 1 310 525 Tm
+(G123456789) Tj
+T*
+ET
+BT
+1 0 0 1 450 525 Tm
+(06\05710\0571978) Tj
+T*
+ET
+BT
+1 0 0 1 550 525 Tm
+(M) Tj
+T*
+ET
+BT
+1 0 0 1 110 505 Tm
+(ABC Corp) Tj
+T*
+ET
+BT
+1 0 0 1 310 505 Tm
+(XYZ Health) Tj
+T*
+ET
+BT
+1 0 0 1 450 505 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 110 475 Tm
+(Yes) Tj
+T*
+ET
+BT
+1 0 0 1 310 475 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 450 475 Tm
+(California) Tj
+T*
+ET
+BT
+1 0 0 1 550 475 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 110 445 Tm
+(Jane Doe) Tj
+T*
+ET
+BT
+1 0 0 1 310 445 Tm
+(03\05720\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 110 415 Tm
+(A987654321) Tj
+T*
+ET
+BT
+1 0 0 1 310 415 Tm
+(John Doe) Tj
+T*
+ET
+BT
+1 0 0 1 450 415 Tm
+(456 Elm St\054 Apt 23) Tj
+T*
+ET
+BT
+1 0 0 1 550 415 Tm
+(Chicago) Tj
+T*
+ET
+BT
+1 0 0 1 650 415 Tm
+(IL) Tj
+T*
+ET
+BT
+1 0 0 1 750 415 Tm
+(60610) Tj
+T*
+ET
+BT
+1 0 0 1 850 415 Tm
+(555\055789\0551234) Tj
+T*
+ET
+BT
+1 0 0 1 110 385 Tm
+(G345678901) Tj
+T*
+ET
+BT
+1 0 0 1 310 385 Tm
+(07\05720\0571980) Tj
+T*
+ET
+BT
+1 0 0 1 450 385 Tm
+(M) Tj
+T*
+ET
+BT
+1 0 0 1 550 385 Tm
+(Tech Solutions) Tj
+T*
+ET
+BT
+1 0 0 1 700 385 Tm
+(Blue Shield) Tj
+T*
+ET
+BT
+1 0 0 1 850 385 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 110 355 Tm
+(John Doe) Tj
+T*
+ET
+BT
+1 0 0 1 110 325 Tm
+(02\05701\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 310 325 Tm
+(01\05715\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 110 295 Tm
+(02\05702\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 250 295 Tm
+(02\05715\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 450 295 Tm
+(Dr\056 Emily Brown) Tj
+T*
+ET
+BT
+1 0 0 1 600 295 Tm
+(MD67890) Tj
+T*
+ET
+BT
+1 0 0 1 110 265 Tm
+(02\05705\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 250 265 Tm
+(02\05710\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 450 265 Tm
+(Yes) Tj
+T*
+ET
+BT
+1 0 0 1 600 265 Tm
+(\0441200) Tj
+T*
+ET
+BT
+1 0 0 1 750 265 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 900 265 Tm
+(ABC123) Tj
+T*
+ET
+BT
+1 0 0 1 1050 265 Tm
+(PA56789) Tj
+T*
+ET
+BT
+1 0 0 1 110 235 Tm
+(Flu) Tj
+T*
+ET
+BT
+1 0 0 1 250 235 Tm
+(Fever) Tj
+T*
+ET
+BT
+1 0 0 1 450 235 Tm
+(Cough) Tj
+T*
+ET
+BT
+1 0 0 1 600 235 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 110 205 Tm
+(02\05707\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 250 205 Tm
+(02\05707\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 450 205 Tm
+(Clinic) Tj
+T*
+ET
+BT
+1 0 0 1 600 205 Tm
+(Consultation) Tj
+T*
+ET
+BT
+1 0 0 1 750 205 Tm
+(99214) Tj
+T*
+ET
+BT
+1 0 0 1 900 205 Tm
+(J11\0561) Tj
+T*
+ET
+BT
+1 0 0 1 1050 205 Tm
+(\044250) Tj
+T*
+ET
+BT
+1 0 0 1 1200 205 Tm
+(1) Tj
+T*
+ET
+BT
+1 0 0 1 1350 205 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 1500 205 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 1650 205 Tm
+(No) Tj
+T*
+ET
+BT
+1 0 0 1 1800 205 Tm
+(N\057A) Tj
+T*
+ET
+BT
+1 0 0 1 110 175 Tm
+(98\0557654321) Tj
+T*
+ET
+BT
+1 0 0 1 250 175 Tm
+(ACCT\05512345) Tj
+T*
+ET
+BT
+1 0 0 1 450 175 Tm
+(Yes) Tj
+T*
+ET
+BT
+1 0 0 1 600 175 Tm
+(\0441500) Tj
+T*
+ET
+BT
+1 0 0 1 750 175 Tm
+(\044200) Tj
+T*
+ET
+BT
+1 0 0 1 900 175 Tm
+(\0441300) Tj
+T*
+ET
+BT
+1 0 0 1 1050 175 Tm
+(Dr\056 Emily Brown) Tj
+T*
+ET
+BT
+1 0 0 1 1200 175 Tm
+(02\05710\0572024) Tj
+T*
+ET
+BT
+1 0 0 1 110 145 Tm
+(HealthCare Center\054 123 Wellness St) Tj
+T*
+ET
+BT
+1 0 0 1 450 145 Tm
+(Dr\056 Emily Brown\054 MD) Tj
+T*
+ET
+BT
+1 0 0 1 750 145 Tm
+(567890) Tj
+T*
+ET
+BT
+1 0 0 1 900 145 Tm
+(G12345) Tj
 T*
 ET
 Q
@@ -1487,15 +2337,15 @@ xref
 0000000120 00000 n 
 0000000169 00000 n 
 0000000464 00000 n 
-0000027647 00000 n 
-0000027718 00000 n 
-0000027788 00000 n 
-0000027858 00000 n 
-0000027965 00000 n 
-0000028063 00000 n 
-0000029378 00000 n 
-0000029481 00000 n 
-0000029756 00000 n 
+0000031292 00000 n 
+0000031363 00000 n 
+0000031433 00000 n 
+0000031503 00000 n 
+0000031610 00000 n 
+0000031708 00000 n 
+0000033023 00000 n 
+0000033126 00000 n 
+0000033401 00000 n 
 trailer
 <<
 /Size 15
@@ -1503,5 +2353,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-47363
+54653
 %%EOF
